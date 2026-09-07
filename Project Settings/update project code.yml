@@ -1,0 +1,26 @@
+info:
+  name: update project code
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/projects/settings/project-code"
+  params:
+    - name: years
+      value: 2026,2027
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: "{\r\n  \"enabled\": false\r\n}"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

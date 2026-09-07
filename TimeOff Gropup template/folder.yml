@@ -1,0 +1,7 @@
+info:
+  name: TimeOff Gropup template
+  type: folder
+  seq: 10
+
+request:
+  auth: inherit

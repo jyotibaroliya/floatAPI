@@ -1,0 +1,27 @@
+info:
+  name: List
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/timezones/list"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"search\": \"\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,46 @@
+info:
+  name: Create
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/workspace/create-workspace"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"token\": \"tKgPwB9FZ6SPKwLyKCJt\",\r
+
+      \  \"workspaceName\": \"Test ProjectStage\",\r
+
+      \  \"slug\": \"test-projectstage\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "let response = res.getBody();\r
+
+        \r
+
+        // adjust based on your API response\r
+
+        bru.setEnvVar(\"auth_token\", response.data.token);\r
+
+        \r
+
+        // optional log\r
+
+        console.log(\"Token saved:\", response.data.token);"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

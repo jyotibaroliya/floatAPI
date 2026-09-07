@@ -1,0 +1,29 @@
+info:
+  name: New Request
+  type: http
+  seq: 5
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/timeoff-groups/2"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"search\": \"\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 10\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,7 @@
+info:
+  name: TimeOffGroup Tenant
+  type: folder
+  seq: 12
+
+request:
+  auth: inherit

@@ -1,0 +1,103 @@
+info:
+  name: update work-schedule
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/team/work-schedule"
+  body:
+    type: json
+    data: "{\r
+
+      \   // \"timeZone\":\"America/New_York\"\r
+
+      \  \"days\": [\r
+
+      \            {\r
+
+      \                \"day\": 0,\r
+
+      \                \"working\": false,\r
+
+      \                \"hours\": null\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"day\": 1,\r
+
+      \                \"working\": true,\r
+
+      \                \"hours\": 9.00\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"day\": 2,\r
+
+      \                \"working\": true,\r
+
+      \                \"hours\": 8.00\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"day\": 3,\r
+
+      \                \"working\": true,\r
+
+      \                \"hours\": 8.00\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"day\": 4,\r
+
+      \                \"working\": true,\r
+
+      \                \"hours\": 8.00\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"day\": 5,\r
+
+      \                \"working\": true,\r
+
+      \                \"hours\": 8.00\r
+
+      \            },\r
+
+      \            {\r
+
+      \                \"day\": 6,\r
+
+      \                \"working\": true,\r
+
+      \                \"hours\": 8.00\r
+
+      \            }\r
+
+      \        ],\r
+
+      \   \"applyMode\":\"SpecificDateOnward\", //\"AllDates\"\r
+
+      \   \"EffectiveFrom\":\"2026-08-11\"     \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

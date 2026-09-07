@@ -1,0 +1,29 @@
+info:
+  name: Create
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/project-stages"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"stageName\": \"test\",\r
+
+      \  \"stageStatus\": \"test\",\r
+
+      \  \"description\": \"test\",\r
+
+      \  \"color\": \"red\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

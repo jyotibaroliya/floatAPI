@@ -1,0 +1,27 @@
+info:
+  name: add person to project
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects/22/team/person"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"personId\": 13,\r
+
+      \  \"phaseId\": null,\r
+
+      \  \"resourceRoleId\": null\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

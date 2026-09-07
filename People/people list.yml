@@ -1,0 +1,47 @@
+info:
+  name: people list
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/people/list"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"search\": \"\",\r
+
+      \  \"type\": \"\", // Employee,Contractor,PlaceHolder\r
+
+      \  \"status\": \"Active\", // Active,InActive\r
+
+      //   \"departmentId\": 0,\r
+
+      //   \"resourceRoleId\": 0,\r
+
+      \ \"access\": \"\",\r
+
+      \  \"tagIds\": [\r
+
+      \    \r
+
+      \  ],\r
+
+      \ // \"onlyShowWithAccess\": true,\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 50\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

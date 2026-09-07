@@ -1,0 +1,51 @@
+info:
+  name: get template
+  type: http
+  seq: 10
+
+http:
+  method: GET
+  url: "{{base_url}}/api/projects/import/template?prePopulateExistingProjects=true"
+  params:
+    - name: prePopulateExistingProjects
+      value: "true"
+      type: query
+  body:
+    type: text
+    data: "{\r
+
+      \  //\"savedViewId\": 0,\r
+
+      \  \"search\": \"\", // Project name or code\r
+
+      \  \"tab\": \"Active\", //Active / Archived / All\r
+
+      \  \"status\": \"\",\r
+
+      \  \"projectType\": \"\",\r
+
+      \ // \"clientId\": 0,\r
+
+      \ // \"projectOwnerId\": 0,\r
+
+      \  //\"dateFrom\": \"2026-08-19T10:28:30.689Z\",\r
+
+      \  //\"dateTo\": \"2026-08-19T10:28:30.689Z\",\r
+
+      \  //\"onlyShowWithAccess\": true,\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 10\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

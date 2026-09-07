@@ -1,0 +1,29 @@
+info:
+  name: save timeoff groups
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/timeoff-groups"
+  body:
+    type: json
+    data: "{\r
+
+      \   \"groupName\": \"test\",\r
+
+      \  \"isActive\": true,\r
+
+      \  \"sortOrder\": 2\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

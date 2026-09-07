@@ -1,0 +1,29 @@
+info:
+  name: update leave type
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/leave-types/8"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"groupId\": 1,\r
+
+      \  \"name\": \"test12\",\r
+
+      \  \"color\": \"#859585\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

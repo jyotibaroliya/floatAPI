@@ -1,0 +1,29 @@
+info:
+  name: fetch by Id
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/timeoff-groups/1"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"search\": \"\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 10\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,7 @@
+info:
+  name: Leavetype group template
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

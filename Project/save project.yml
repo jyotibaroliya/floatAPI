@@ -1,0 +1,75 @@
+info:
+  name: save project
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"8\",\r
+
+      \    \"projectCode\": \"\",\r
+
+      \   // \"projectOwnerId\": 70,\r
+
+      \    \"clientId\": null,\r
+
+      \    \"newClientName\": \"\",\r
+
+      \    \"projectType\": \"Billable\",\r
+
+      \    \"stageId\": 8,\r
+
+      \    \"color\": \"#D3B4ED\",\r
+
+      \    \"notes\": \"\",\r
+
+      \    \"startDate\": null,\r
+
+      \    \"endDate\": null,\r
+
+      \    \"billingMode\": \"SetManually\",\r
+
+      \    \"billRate\": 0,\r
+
+      \    \"managersCanEdit\": false,\r
+
+      \    \"budgetType\": \"TimeAndMaterials\",\r
+
+      \    \"budgetBy\": \"Project\",\r
+
+      \    \"totalFee\": 0,\r
+
+      \    \"totalHours\": 0,\r
+
+      \    \"currencyId\": 2,\r
+
+      \    \"exchangeRate\": 1464,\r
+
+      \    \"assignments\": [],\r
+
+      \    \"phases\": [],\r
+
+      \    \"tasks\": [],\r
+
+      \    \"expenses\": [],\r
+
+      \    \"tagIds\": [],\r
+
+      \    \"tags\": []\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,16 @@
+info:
+  name: public holiday dropdown
+  type: http
+  seq: 9
+
+http:
+  method: GET
+  url: "{{base_url}}/api/time-off/public-holidays/dropdown"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

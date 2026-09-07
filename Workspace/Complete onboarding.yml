@@ -1,0 +1,37 @@
+info:
+  name: Complete onboarding
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/workspace/complete-onboarding"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"teamSize\": 1,\r
+
+      \  \"projectName\": \"Test ProjectStage Project\",\r
+
+      \  \"teamMembers\": [\r
+
+      \    \"Dhanvi Patel\",\r
+
+      \    \"Dhimahi Sharma\",\r
+
+      \    \"Krisha shah\"\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

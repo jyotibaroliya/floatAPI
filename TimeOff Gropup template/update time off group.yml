@@ -1,0 +1,29 @@
+info:
+  name: update time off group
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/timeoff-groups/2"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"groupName\": \"test23\",\r
+
+      \  \"isActive\": true,\r
+
+      \  \"sortOrder\": 0\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

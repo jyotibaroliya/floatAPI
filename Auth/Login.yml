@@ -1,0 +1,62 @@
+info:
+  name: Login
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/Auth/login"
+  body:
+    type: json
+    data: "{\r
+
+      \    //  \"email\": \"jyoti.rami@yopmail.com\",\r
+
+      \    //   \"password\": \"JyotiRami@123\"\r
+
+      \    //  \"email\": \"spec.india@yopmail.com\",\r
+
+      \    //  \"password\": \"Spec@123456789\"\r
+
+      \      \"email\": \"testprojectstage@yopmail.com\",\r
+
+      \      \"password\": \"TestProjectStage@123\"\r
+
+      \    //   \"email\": \"usertest1@yopmail.com\",\r
+
+      \    //   \"password\": \"UserTest@1234\"\r
+
+      \    //   \"email\":\"nehalrami@yopmail.com\",\r
+
+      \    //   \"password\":\"NehalRami@123\",\r
+
+      \    // \"email\": \"spec.usa@yopmail.com\",\r
+
+      \    // \"password\": \"Spec@123456789\"\r
+
+      }"
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: "let response = res.getBody();\r
+
+        \r
+
+        // adjust based on your API response\r
+
+        bru.setEnvVar(\"auth_token\", response.data.token);\r
+
+        \r
+
+        // optional log\r
+
+        console.log(\"Token saved:\", response.data.token);"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

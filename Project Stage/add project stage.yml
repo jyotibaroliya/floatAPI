@@ -1,0 +1,29 @@
+info:
+  name: add project stage
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects/stages"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"stageName\": \"testdfdgdgdg\",\r
+
+      \  \"stageStatus\": \"Draft\",\r
+
+      \  \"description\": \"sdfdfgdf\",\r
+
+      \  \"color\": \"#785854\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

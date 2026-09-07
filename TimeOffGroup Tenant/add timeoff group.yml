@@ -1,0 +1,25 @@
+info:
+  name: add timeoff group
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/time-off/groups"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"groupName\": \"TestGroupPeople\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

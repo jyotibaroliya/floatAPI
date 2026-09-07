@@ -1,0 +1,7 @@
+info:
+  name: WorkSpace Currencies
+  type: folder
+  seq: 13
+
+request:
+  auth: inherit

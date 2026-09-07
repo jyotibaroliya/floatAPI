@@ -1,0 +1,7 @@
+info:
+  name: Access Control
+  type: folder
+  seq: 21
+
+request:
+  auth: inherit

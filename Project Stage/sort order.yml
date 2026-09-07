@@ -1,0 +1,25 @@
+info:
+  name: sort order
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/projects/stages/reorder"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"stageStatus\": \"Confirmed\",\r
+
+      \  \"orderedStageIds\": [5, 3, 4]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

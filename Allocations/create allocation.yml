@@ -1,0 +1,55 @@
+info:
+  name: create allocation
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/allocations"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"projectId\": 31,\r
+
+      \  \"phaseId\": null,\r
+
+      \  \"taskId\": null,\r
+
+      \  \"taskName\": \"This is the Postman taskdddddddd\",\r
+
+      \  \"allocationType\": \"Hours\",\r
+
+      \  \"hoursPerDay\": 8,\r
+
+      \  \"startDate\": \"2026-09-09\",\r
+
+      \  \"endDate\": \"2026-09-10\",\r
+
+      \  \"specificTimeEnabled\": false,\r
+
+      \  \"startTime\": null,\r
+
+      \  \"endTime\": null,\r
+
+      \  \"repeatType\": \"Every6Weeks\",\r
+
+      \  \"status\": \"Tentative\",\r
+
+      \  \"notes\": \"monthly task\",\r
+
+      \  \"personIds\": [29],\r
+
+      \  \"repeatUntilDate\":\"2027-10-01\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

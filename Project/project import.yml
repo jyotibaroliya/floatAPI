@@ -1,0 +1,30 @@
+info:
+  name: project import
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects/import"
+  params:
+    - name: prePopulateExistingProjects
+      value: "true"
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /C:/Users/jyoti.baroliya/Downloads/Project_2026-08-21.csv
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

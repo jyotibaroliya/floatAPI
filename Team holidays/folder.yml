@@ -1,0 +1,7 @@
+info:
+  name: Team holidays
+  type: folder
+  seq: 17
+
+request:
+  auth: inherit

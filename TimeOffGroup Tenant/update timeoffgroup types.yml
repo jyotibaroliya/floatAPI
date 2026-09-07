@@ -1,0 +1,27 @@
+info:
+  name: update timeoffgroup types
+  type: http
+  seq: 10
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/time-off/groups/types/9"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"testtype145\",\r
+
+      \  \"color\": \"#658542\",\r
+
+      \  \"allowanceType\": \"Unlimited\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

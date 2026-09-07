@@ -1,0 +1,25 @@
+info:
+  name: archive timeoff group
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{base_url}}/api/time-off/groups/1/archive"
+  body:
+    type: text
+    data: "{\r
+
+      \"groupName\":\"TestUpdate\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

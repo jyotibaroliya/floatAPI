@@ -1,0 +1,7 @@
+info:
+  name: Project Stage
+  type: folder
+  seq: 19
+
+request:
+  auth: inherit

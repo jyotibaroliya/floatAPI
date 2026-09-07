@@ -1,0 +1,73 @@
+info:
+  name: update project phase
+  type: http
+  seq: 15
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/projects/19/phases/2"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"projectphase2\"//,\r
+
+      //   \"stageId\": 0,\r
+
+      //   \"notes\": \"string\",\r
+
+      //   \"startDate\": \"2026-08-25T11:51:21.118Z\",\r
+
+      //   \"endDate\": \"2026-08-25T11:51:21.118Z\",\r
+
+      //   \"billingMode\": \"SetManually\",\r
+
+      //   \"billRate\": 0,\r
+
+      //   \"team\": [\r
+
+      //     {\r
+
+      //       \"id\": 0,\r
+
+      //       \"personId\": 0,\r
+
+      //       \"resourceRoleId\": 0,\r
+
+      //       \"hoursPerDay\": 0,\r
+
+      //       \"billRate\": 0\r
+
+      //     }\r
+
+      //   ],\r
+
+      //   \"tasks\": [\r
+
+      //     {\r
+
+      //       \"id\": 0,\r
+
+      //       \"taskName\": \"string\",\r
+
+      //       \"isBillable\": true,\r
+
+      //       \"onlyManagersCanAddTask\": true,\r
+
+      //       \"cost\": 0\r
+
+      //     }\r
+
+      //   ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

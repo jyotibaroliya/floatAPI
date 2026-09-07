@@ -1,0 +1,27 @@
+info:
+  name: assign people
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/time-off/groups/3/assign-people"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"personIds\": [\r
+
+      \    2\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

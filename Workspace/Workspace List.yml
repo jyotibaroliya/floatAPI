@@ -1,0 +1,29 @@
+info:
+  name: Workspace List
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/workspace/list"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"search\": \"\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 10\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

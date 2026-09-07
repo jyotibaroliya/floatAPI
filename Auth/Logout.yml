@@ -1,0 +1,27 @@
+info:
+  name: Logout
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/Auth/logout"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"email\": \"testdhwani@yopmail.com\",\r
+
+      \  \"password\": \"TestDhwani@123\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

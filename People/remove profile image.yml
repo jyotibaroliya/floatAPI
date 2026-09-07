@@ -1,0 +1,23 @@
+info:
+  name: remove profile image
+  type: http
+  seq: 12
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/people/16/avatar"
+  body:
+    type: multipart-form
+    data:
+      - name: File
+        type: file
+        value:
+          - /C:/Users/jyoti.baroliya/Pictures/Screenshots/Screenshot 2026-02-20 103533.png
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

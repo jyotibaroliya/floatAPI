@@ -1,0 +1,20 @@
+info:
+  name: get project team filter by phase
+  type: http
+  seq: 18
+
+http:
+  method: GET
+  url: "{{base_url}}/api/projects/22/team?phaseId=6"
+  params:
+    - name: phaseId
+      value: "6"
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,35 @@
+info:
+  name: assign-projects
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{base_url}}/api/people/assign-projects"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"personIds\": [\r
+
+      \    18,10\r
+
+      \  ],\r
+
+      \  \"projectIds\": [\r
+
+      \    9\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

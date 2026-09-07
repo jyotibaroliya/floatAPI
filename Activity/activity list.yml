@@ -1,0 +1,43 @@
+info:
+  name: activity list
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/activity/list"
+  body:
+    type: json
+    data: "{\r
+
+      //   \"dateFrom\": \"2026-08-20T04:30:01.724Z\",\r
+
+      //   \"dateTo\": \"2026-08-20T04:30:01.724Z\",\r
+
+      //   \"projectId\": 0,\r
+
+      //   \"personId\": 0,\r
+
+      //   \"departmentId\": 0,\r
+
+      //   \"action\": \"string\",\r
+
+      //   \"actionedByUserId\": 0,\r
+
+      //   \"type\": \"string\",\r
+
+      //   \"sortDir\": \"string\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 10\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

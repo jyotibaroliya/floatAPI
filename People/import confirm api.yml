@@ -1,0 +1,39 @@
+info:
+  name: import confirm api
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{base_url}}/api/people/import/confirm"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"sessionId\": \"2742461af9384b4382b997ead3552fe7\",\r
+
+      \  \"defaultAction\": \"Update\",\r
+
+      \  \"rows\": [\r
+
+      \    {\r
+
+      \      \"rowNumber\": 2,\r
+
+      \      \"action\": \"Update\"\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

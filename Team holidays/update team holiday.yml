@@ -1,0 +1,32 @@
+info:
+  name: update team holiday
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/time-off/team-holidays/1"
+  params:
+    - name: year
+      value: "2026"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"test12345dfdf\",\r
+
+      \  \"startDate\": \"2026-08-15\",\r
+
+      \  \"endDate\": \"2026-08-15\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

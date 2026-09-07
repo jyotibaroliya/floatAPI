@@ -1,0 +1,29 @@
+info:
+  name: update project stage
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/projects/stages/9"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"stageName\": \"test123\",\r
+
+      \  \"stageStatus\": \"Draft\",\r
+
+      \  \"description\": \"sdfdfgdf\",\r
+
+      \  \"color\": \"#785854\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,27 @@
+info:
+  name: Update
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/clients/8"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"clientName\": \"Test123\",\r
+
+      \  \"clientEmail\": \"test123@spec.india.com\",\r
+
+      \  \"clientPhone\": \"81045632156\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,27 @@
+info:
+  name: Super-admin
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{base_url}}/api/Users/super-admin"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"string\",\r
+
+      \  \"email\": \"string\",\r
+
+      \  \"password\": \"string\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

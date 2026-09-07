@@ -1,0 +1,19 @@
+info:
+  name: update timeoff settings
+  type: http
+  seq: 2
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/time-off/settings/approvals"
+  body:
+    type: json
+    data: "{\r\n    \"enabled\":false\r\n}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

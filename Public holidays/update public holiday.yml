@@ -1,0 +1,143 @@
+info:
+  name: update public holiday
+  type: http
+  seq: 8
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/time-off/public-holidays/9"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"calendarName\": \"United States - South Dakota\",\r
+
+      \    \"country\": \"US\",\r
+
+      \    \"region\": \"US-SD\",\r
+
+      \    \"holidays\": [\r
+
+      \        {\r
+
+      \            \"holidayName\": \"Christmas Day\",\r
+
+      \            \"isSelected\": true,\r
+
+      \            \"isCustom\": false,\r
+
+      \            \"dates\": [\r
+
+      \                {\r
+
+      \                    \"year\": 2026,\r
+
+      \                    \"date\": \"2026-12-25T00:00:00\"\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"year\": 2027,\r
+
+      \                    \"date\": \"2027-12-24T00:00:00\"\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"holidayName\": \"Labour Day\",\r
+
+      \            \"isSelected\": true,\r
+
+      \            \"isCustom\": false,\r
+
+      \            \"dates\": [\r
+
+      \                {\r
+
+      \                    \"year\": 2026,\r
+
+      \                    \"date\": \"2026-09-07T00:00:00\"\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"year\": 2027,\r
+
+      \                    \"date\": \"2027-09-06T00:00:00\"\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"holidayName\": \"test custom Day\",\r
+
+      \            \"isSelected\": true,\r
+
+      \            \"isCustom\": true,\r
+
+      \            \"dates\": [\r
+
+      \                {\r
+
+      \                    \"year\": 2026,\r
+
+      \                    \"date\": \"2026-09-10T00:00:00\"\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"year\": 2027,\r
+
+      \                    \"date\": \"2027-09-10T00:00:00\"\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"year\": 2026,\r
+
+      \                    \"date\": \"2026-09-15T00:00:00\"\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"year\": 2027,\r
+
+      \                    \"date\": \"2027-09-15T00:00:00\"\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"personIds\": [\r
+
+      \        2\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,7 @@
+info:
+  name: Public holidays
+  type: folder
+  seq: 15
+
+request:
+  auth: inherit

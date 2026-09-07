@@ -1,0 +1,51 @@
+info:
+  name: get calendar settings
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{base_url}}/api/team/calendar-settings"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"rangePreset\": \"ThisWeek\",\r
+
+      \  \"viewMode\": \"Days\",\r
+
+      \  \"anchorDate\": \"2026-08-27\",\r
+
+      \  \"fromDate\": null,\r
+
+      \  \"toDate\": null,\r
+
+      \  \"personIds\": null,\r
+
+      \  \"projectIds\": null,\r
+
+      \  \"clientIds\": null,\r
+
+      \  \"departmentIds\": null,\r
+
+      \  \"resourceRoleIds\": null,\r
+
+      \  \"search\": null,\r
+
+      \  \"includeInactivePeople\": false,\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 50\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

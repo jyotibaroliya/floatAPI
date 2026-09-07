@@ -1,0 +1,23 @@
+info:
+  name: get tag
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{base_url}}/api/workspace/tags?tagtype=people"
+  params:
+    - name: tagtype
+      value: people
+      type: query
+  body:
+    type: text
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

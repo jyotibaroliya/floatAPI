@@ -1,0 +1,31 @@
+info:
+  name: add timeoff group types
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{base_url}}/api/time-off/groups/11/types"
+  body:
+    type: json
+    data: "{\r
+
+      \      \"groupId\": 11,\r
+
+      \  \"name\": \"testgrouptypes\",\r
+
+      \  \"color\": \"#658555\",\r
+
+      \  \"allowanceType\": \"Unlimited\",\r
+
+      \  \"personIds\":[2]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

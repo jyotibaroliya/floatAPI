@@ -1,0 +1,30 @@
+info:
+  name: update tag
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/workspace/tags/1"
+  params:
+    - name: tagtype
+      value: project
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"test123458\",\r
+
+      \  \"color\": \"#898755\"\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

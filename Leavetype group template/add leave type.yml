@@ -1,0 +1,41 @@
+info:
+  name: add leave type
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/leave-types/"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"groupId\": 1,\r
+
+      \  \"name\": \"test\",\r
+
+      \  \"color\": \"#859585\",\r
+
+      \  \"allowanceType\": \"string\",\r
+
+      //   \"allowanceDays\": 0,\r
+
+      //   \"carryForward\": true,\r
+
+      //   \"maxCarryDays\": 0,\r
+
+      \  \"isActive\": true,\r
+
+      \  \"sortOrder\": 0\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

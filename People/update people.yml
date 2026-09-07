@@ -1,0 +1,51 @@
+info:
+  name: update people
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/people/21"
+  body:
+    type: json
+    data: "{\r
+
+      \    // \"Name\": \"Nehal\",\r
+
+      \    //\"lastName\": \"Rami\",\r
+
+      \     \"email\": \"usertest1@yopmail.com\",\r
+
+      \    //\"resourceRoleId\": 3,\r
+
+      \    //   \"tagIds\": [\r
+
+      \    //     1,2\r
+
+      \    //   ]\r
+
+      \    \"timeOff\": {\r
+
+      \        \"timeOffTypeIds\": [\r
+
+      \            1,\r
+
+      \            2,\r
+
+      \            6\r
+
+      \        ]\r
+
+      \    }\r
+
+      \    //\"type\": \"Employee\" // Employee,Contractor,PlaceHolder\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

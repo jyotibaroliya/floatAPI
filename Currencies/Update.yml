@@ -1,0 +1,31 @@
+info:
+  name: Update
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/currencies/1"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"code\": \"USD\",\r
+
+      \    \"name\": \"US Dollar\",\r
+
+      \    \"symbol\": \"$\",\r
+
+      \    \"isActive\": true,\r
+
+      \    \"sortOrder\": 1\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

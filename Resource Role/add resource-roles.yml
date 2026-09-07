@@ -1,0 +1,27 @@
+info:
+  name: add resource-roles
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/resource-roles"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"roleName\": \"testrole\",\r
+
+      \  \"costRate\": 250,\r
+
+      \  \"billRate\": 550\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

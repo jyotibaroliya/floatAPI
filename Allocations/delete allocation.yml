@@ -1,0 +1,29 @@
+info:
+  name: delete allocation
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{base_url}}/api/allocations/29"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"deleteScope\":\"SingleOccurrence\",\r
+
+      \    \"occurrenceStartDate\":\"2026-12-02\"\r
+
+      \r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

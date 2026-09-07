@@ -1,0 +1,27 @@
+info:
+  name: Update
+  type: http
+  seq: 1
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/workspace-currencies/{id}"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"currencyId\": 0,\r
+
+      \  \"exchangeRate\": 0,\r
+
+      \  \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

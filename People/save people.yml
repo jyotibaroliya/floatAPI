@@ -1,0 +1,97 @@
+info:
+  name: save people
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/people"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"usertest\",\r
+
+      \  //\"lastName\": \"Rami\",\r
+
+      \  \"email\": \"usertest@yopmail.com\",\r
+
+      \  \"resourceRoleId\": 3,\r
+
+      //   \"departmentId\": 1,\r
+
+      //   \"costRate\": 250,\r
+
+      //   \"billRate\": 550,\r
+
+      //   \"tagIds\": [\r
+
+      //     4\r
+
+      //   ],\r
+
+      \  \"type\": \"Employee\", // Employee,Contractor,PlaceHolder\r
+
+      //   \"avatarUrl\": \"jalpapatel\",\r
+
+      \  \"accessRoleCode\": \"MEMBER\",\r
+
+      \  \"viewScope\":\"Everyone\",\r
+
+      \  \"editScope\":\"Self\"//,\r
+
+      \  //\"SelectedPermissions\":[]\r
+
+      //   \"availability\": {\r
+
+      //     \"startDate\": \"2026-08-17T06:35:03.748Z\",\r
+
+      //     \"endDate\": \"2027-08-17T06:35:03.748Z\",\r
+
+      //     \"type\": \"full-time\", //Full-time Part-time\r
+
+      //     \"notes\": \"test availability\"\r
+
+      \   // \"workingHours\": [\r
+
+      \   //   {\r
+
+      \   //     \"dayOfWeek\": 0,\r
+
+      \   //     \"hours\": 0\r
+
+      \  //    }\r
+
+      \  //  ]\r
+
+      //   },\r
+
+      //   \"timeOff\": {\r
+
+      //     \"timeOffTypeIds\": [\r
+
+      //       8\r
+
+      //     ]\r
+
+      //   },\r
+
+      //    \"projectIds\": [\r
+
+      //     0\r
+
+      //   ],\r
+
+      \  //\"holidayCalendarId\": 1\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

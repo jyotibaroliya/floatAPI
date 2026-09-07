@@ -1,0 +1,36 @@
+info:
+  name: catalog
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{base_url}}/api/time-off/public-holidays/catalog?country=US&region=US-SD"
+  params:
+    - name: country
+      value: US
+      type: query
+    - name: region
+      value: US-SD
+      type: query
+    - name: years
+      value: 2026,2027
+      type: query
+      disabled: true
+  body:
+    type: text
+    data: "{\r
+
+      \"groupName\":\"TestUpdate\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

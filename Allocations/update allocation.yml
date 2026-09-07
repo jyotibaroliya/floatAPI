@@ -1,0 +1,61 @@
+info:
+  name: update allocation
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/allocations/31"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"projectId\": 32,\r
+
+      \    //   \"phaseId\": 5,\r
+
+      \    //   \"taskId\": null,\r
+
+      \    //   \"allocationType\": \"Hours\",\r
+
+      \    \"hoursPerDay\": 8,\r
+
+      \    // \"startDate\": \"2027-01-09\",\r
+
+      \    // \"endDate\": \"2027-01-13\",\r
+
+      \    \"specificTimeEnabled\": false,\r
+
+      \    //   \"startTime\": null,\r
+
+      \    //   \"endTime\": null,\r
+
+      \    \"repeatType\": \"Weekly\",\r
+
+      \    //   \"status\": \"Tentative\",\r
+
+      \    \"notes\": \"monthly\",\r
+
+      \    \"repeatUntilDate\": \"2026-10-01\"\r
+
+      \    // \"personIds\": [\r
+
+      \    //     10\r
+
+      \    // ],\r
+
+      \    //\"updateScope\": \"ThisAndFutureOccurrences\",\r
+
+      \    //\"occurrenceStartDate\": \"2026-10-09\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

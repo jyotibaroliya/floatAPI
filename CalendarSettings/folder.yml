@@ -1,0 +1,7 @@
+info:
+  name: CalendarSettings
+  type: folder
+  seq: 27
+
+request:
+  auth: inherit

@@ -1,0 +1,27 @@
+info:
+  name: delete project stage
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects/stages/delete"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"stageIds\": [\r
+
+      \    9,10\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

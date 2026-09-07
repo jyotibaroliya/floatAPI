@@ -1,0 +1,25 @@
+info:
+  name: Assign person onto unassigned role seat
+  type: http
+  seq: 21
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/projects/22/team/15/assign-person"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"personId\": 20,\r
+
+      \  \"resourceRoleId\": null\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

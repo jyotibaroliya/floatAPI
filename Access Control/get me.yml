@@ -1,0 +1,305 @@
+info:
+  name: get me
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{base_url}}/api/access-control/me"
+  body:
+    type: text
+    data: "{\r
+
+      \    \"permissions\": [\r
+
+      \        {\r
+
+      \            \"moduleId\": 1,\r
+
+      \            \"moduleCode\": \"DASHBOARD\",\r
+
+      \            \"moduleName\": \"Dashboard\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 2,\r
+
+      \            \"moduleCode\": \"PEOPLE\",\r
+
+      \            \"moduleName\": \"People\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 3,\r
+
+      \            \"moduleCode\": \"PROJECTS\",\r
+
+      \            \"moduleName\": \"Projects\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 4,\r
+
+      \            \"moduleCode\": \"CLIENTS\",\r
+
+      \            \"moduleName\": \"Clients\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 5,\r
+
+      \            \"moduleCode\": \"SCHEDULING\",\r
+
+      \            \"moduleName\": \"Scheduling\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 6,\r
+
+      \            \"moduleCode\": \"TIME_TRACKING\",\r
+
+      \            \"moduleName\": \"Time Tracking\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 7,\r
+
+      \            \"moduleCode\": \"DEPARTMENTS\",\r
+
+      \            \"moduleName\": \"Departments\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 8,\r
+
+      \            \"moduleCode\": \"TAGS\",\r
+
+      \            \"moduleName\": \"Tags\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 9,\r
+
+      \            \"moduleCode\": \"PROJECT_STAGES\",\r
+
+      \            \"moduleName\": \"Project Stages\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 10,\r
+
+      \            \"moduleCode\": \"CURRENCIES\",\r
+
+      \            \"moduleName\": \"Currencies\",\r
+
+      \            \"canCreate\": false,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 11,\r
+
+      \            \"moduleCode\": \"WORK_SCHEDULES\",\r
+
+      \            \"moduleName\": \"Work Schedules\",\r
+
+      \            \"canCreate\": true,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 12,\r
+
+      \            \"moduleCode\": \"FIELD_CONFIG\",\r
+
+      \            \"moduleName\": \"Field Configuration\",\r
+
+      \            \"canCreate\": true,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 13,\r
+
+      \            \"moduleCode\": \"ACCESS_CONTROL\",\r
+
+      \            \"moduleName\": \"Access Control\",\r
+
+      \            \"canCreate\": true,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"moduleId\": 14,\r
+
+      \            \"moduleCode\": \"REPORTS\",\r
+
+      \            \"moduleName\": \"Reports\",\r
+
+      \            \"canCreate\": true,\r
+
+      \            \"canRead\": true,\r
+
+      \            \"canUpdate\": true,\r
+
+      \            \"canDelete\": true,\r
+
+      \            \"isUserOverride\": false\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,29 @@
+info:
+  name: Create
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{base_url}}/api/timezones"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"code\": \"UTC+0000\",\r
+
+      \  \"name\": \"UTC+0000\",\r
+
+      \  \"utcOffset\": \"+000\",\r
+
+      \  \"isActive\": true\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

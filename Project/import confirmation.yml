@@ -1,0 +1,76 @@
+info:
+  name: import confirmation
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects/import/confirm"
+  params:
+    - name: prePopulateExistingProjects
+      value: "true"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: "{\r
+
+      \  \"sessionId\": \"b33ac22e56844897803aa55b3e4e5c9b\",\r
+
+      \  \"defaultAction\": \"Update\",\r
+
+      \  \"rows\": [\r
+
+      \    {\r
+
+      \      \"rowNumber\": 2,\r
+
+      \      \"action\": \"Update\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"rowNumber\": 3,\r
+
+      \      \"action\": \"Update\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"rowNumber\": 4,\r
+
+      \      \"action\": \"Update\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"rowNumber\": 5,\r
+
+      \      \"action\": \"Update\"\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"rowNumber\": 6,\r
+
+      \      \"action\": \"Update\"\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

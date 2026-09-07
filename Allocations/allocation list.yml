@@ -1,0 +1,51 @@
+info:
+  name: allocation list
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/allocations/list"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"rangePreset\": \"ThisMonth\",\r
+
+      \  \"viewMode\": \"Days\",\r
+
+      \  \"anchorDate\": \"2026-09-27\",\r
+
+      \  \"fromDate\": null,\r
+
+      \  \"toDate\": null,\r
+
+      \  \"personIds\": [10],\r
+
+      \  \"projectIds\": [24],\r
+
+      \  \"clientIds\": null,\r
+
+      \  \"departmentIds\": null,\r
+
+      \  \"resourceRoleIds\": null,\r
+
+      \  \"search\": null,\r
+
+      \  \"includeInactivePeople\": false//,\r
+
+      //   \"page\": 1,\r
+
+      //   \"pageSize\": 50\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

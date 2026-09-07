@@ -1,0 +1,25 @@
+info:
+  name: update timeoffgroup
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/time-off/groups/2"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"groupName\": \"TestUpdate\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

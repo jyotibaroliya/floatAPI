@@ -1,0 +1,205 @@
+info:
+  name: save project Copy1
+  type: http
+  seq: 16
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"name\": \"tdhfhdffdftest\",\r
+
+      \ // \"projectCode\": \"string\",\r
+
+      \ // \"projectOwnerId\": 0,\r
+
+      //   \"clientId\": 0,\r
+
+      //   \"newClientName\": \"string\",\r
+
+      //   \"projectType\": \"string\",\r
+
+      \  \"stageId\": 4,\r
+
+      //   \"color\": \"string\",\r
+
+      //   \"notes\": \"string\",\r
+
+      //   \"startDate\": \"2026-08-26T04:58:23.925Z\",\r
+
+      //   \"endDate\": \"2026-08-26T04:58:23.925Z\",\r
+
+      //   \"billingMode\": \"SetManually\",\r
+
+      //   \"billRate\": 0,\r
+
+      //   \"managersCanEdit\": true,\r
+
+      //   \"budgetType\": \"NoBudget\",\r
+
+      //   \"budgetBy\": \"string\",\r
+
+      //   \"totalFee\": 0,\r
+
+      //   \"totalHours\": 0,\r
+
+      //   \"currencyId\": 0,\r
+
+      //   \"exchangeRate\": 0,\r
+
+      \  \"assignments\": [\r
+
+      \    {\r
+
+      \     // \"id\": 0,\r
+
+      \      \"personId\": 14,\r
+
+      \      //\"resourceRoleId\": 0,\r
+
+      \     // \"hoursPerDay\": 0,\r
+
+      \      \"billRate\": 500\r
+
+      \    }\r
+
+      \  ],\r
+
+      \  \"phases\": [\r
+
+      \    {\r
+
+      \      //\"id\": 0,\r
+
+      \      \"name\": \"phasetestghgj\",\r
+
+      \      \"stageId\": 8,\r
+
+      \      \"notes\": \"fgfg\",\r
+
+      \      \"startDate\": \"2026-08-26T04:58:23.925Z\",\r
+
+      \      \"endDate\": \"2026-08-26T04:58:23.925Z\",\r
+
+      \      \"billingMode\": \"SetManually\",\r
+
+      \      \"billRate\": 0\r
+
+      \      //,\r
+
+      \    //   \"team\": [\r
+
+      \    //     {\r
+
+      \    //       \"id\": 0,\r
+
+      \    //       \"personId\": 0,\r
+
+      \    //       \"resourceRoleId\": 0,\r
+
+      \    //       \"hoursPerDay\": 0,\r
+
+      \    //       \"billRate\": 0\r
+
+      \    //     }\r
+
+      \    //   ],\r
+
+      \    //   \"tasks\": [\r
+
+      \    //     {\r
+
+      \    //       \"id\": 0,\r
+
+      \    //       \"taskName\": \"string\",\r
+
+      \    //       \"isBillable\": true,\r
+
+      \    //       \"onlyManagersCanAddTask\": true,\r
+
+      \    //       \"cost\": 0\r
+
+      \    //     }\r
+
+      \    //   ]\r
+
+      \    }\r
+
+      \  ]\r
+
+      \  //,\r
+
+      //   \"tasks\": [\r
+
+      //     {\r
+
+      //       \"id\": 0,\r
+
+      //       \"taskName\": \"string\",\r
+
+      //       \"isBillable\": true,\r
+
+      //       \"onlyManagersCanAddTask\": true,\r
+
+      //       \"cost\": 0\r
+
+      //     }\r
+
+      //   ],\r
+
+      //   \"expenses\": [\r
+
+      //     {\r
+
+      //       \"id\": 0,\r
+
+      //       \"expenseNameId\": 0,\r
+
+      //       \"name\": \"string\",\r
+
+      //       \"cost\": 0,\r
+
+      //       \"quantity\": 0,\r
+
+      //       \"date\": \"2026-08-26T04:58:23.925Z\",\r
+
+      //       \"expenseType\": \"string\"\r
+
+      //     }\r
+
+      //   ],\r
+
+      //   \"tagIds\": [\r
+
+      //     0\r
+
+      //   ],\r
+
+      //   \"tags\": [\r
+
+      //     {\r
+
+      //       \"id\": 0,\r
+
+      //       \"name\": \"string\",\r
+
+      //       \"color\": \"string\"\r
+
+      //     }\r
+
+      //   ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,31 @@
+info:
+  name: seed-defaults
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{base_url}}/api/time-off/groups/seed-defaults"
+  body:
+    type: text
+    data: "{\r
+
+      \  \"search\": \"\",\r
+
+      \  \"status\": \"\",\r
+
+      \  \"page\": 1,\r
+
+      \  \"pageSize\": 10\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

@@ -1,0 +1,27 @@
+info:
+  name: activate timeoffgroup types
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{base_url}}/api/time-off/groups/types/activate"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"typeIds\": [\r
+
+      \    8,9\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

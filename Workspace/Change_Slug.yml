@@ -1,0 +1,25 @@
+info:
+  name: Change_Slug
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/workspace"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"teamName\": \"Spec India\",\r
+
+      \  \"slug\": \"spec-india\"\r
+
+      }\r\n"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

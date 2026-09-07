@@ -1,0 +1,131 @@
+info:
+  name: save project Copy
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{base_url}}/api/projects"
+  body:
+    type: json
+    data: "{\r
+
+      \    \"name\": \"ProjectTest1\",\r
+
+      \    \"projectCode\": \"PRTest1\",\r
+
+      \    // \"projectOwnerId\": 1,\r
+
+      \    \"clientId\": 3,\r
+
+      \    //\"newClientName\": \"string\",\r
+
+      \    \"projectType\": \"Billable\",\r
+
+      \    \"stageId\": 6,\r
+
+      \    \"color\": \"#977757\",\r
+
+      \    \"notes\": \"test\",\r
+
+      \    \"startDate\": \"2026-08-21\",\r
+
+      \    \"endDate\": \"2027-08-21\",\r
+
+      \    \"billingMode\": \"SetManually\",\r
+
+      \    \"billRate\": 0,\r
+
+      \    \"managersCanEdit\": true,\r
+
+      \    \"budgetType\": \"fixedfee\",\r
+
+      \    \"budgetBy\": \"phase\",\r
+
+      \    \"totalFee\": 25000,\r
+
+      \    \"totalHours\": 0,\r
+
+      \    // \"assignments\": [\r
+
+      \    //     {\r
+
+      \    //         \"id\": 0,\r
+
+      \    //         \"personId\": 1,\r
+
+      \    //         //\"resourceRoleId\": 0,\r
+
+      \    //         \"hoursPerDay\": 8,\r
+
+      \    //         \"billRate\": 500\r
+
+      \    //     }\r
+
+      \    // ],\r
+
+      \    \"phases\": [\r
+
+      \        {\r
+
+      \            \"id\": 0,\r
+
+      \            \"name\": \"phase1\",\r
+
+      \            \"startDate\": \"2026-08-21\",\r
+
+      \            \"endDate\": \"2026-09-21\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"tasks\": [\r
+
+      \        {\r
+
+      \            \"id\": 0,\r
+
+      \            \"taskName\": \"task1\",\r
+
+      \            \"isBillable\": true,\r
+
+      \            \"onlyManagersCanAddTask\": true\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"expenses\": [\r
+
+      \        {\r
+
+      \            //\"id\": 0,\r
+
+      \            // \"expenseNameId\": 0,\r
+
+      \            \"name\": \"testexpenses\",\r
+
+      \            \"cost\": 1500,\r
+
+      \            \"quantity\": 10,\r
+
+      \            \"date\": \"2026-08-24T11:01:46.966Z\",\r
+
+      \            \"expenseType\": \"string\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

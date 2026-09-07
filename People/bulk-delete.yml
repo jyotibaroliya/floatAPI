@@ -1,0 +1,27 @@
+info:
+  name: bulk-delete
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{base_url}}/api/people/bulk-delete"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"ids\": [\r
+
+      \    4,9\r
+
+      \  ]\r
+
+      }"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

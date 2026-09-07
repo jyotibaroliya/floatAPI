@@ -1,0 +1,43 @@
+info:
+  name: Save Configuration
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{base_url}}/api/workspace/{{workspace_id}}/modules/{{module_id}}/fields"
+  body:
+    type: json
+    data: "{\r
+
+      \  \"fields\": [\r
+
+      \    {\r
+
+      \      \"id\": 158,\r
+
+      \      \"isRequired\": 1,\r
+
+      \      \"showInGrid\": 1,\r
+
+      \      \"showInForm\": 1,\r
+
+      \      \"isActive\": 1,\r
+
+      \      \"sortOrder\": 5\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

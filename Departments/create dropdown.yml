@@ -1,0 +1,27 @@
+info:
+  name: create dropdown
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{base_url}}/api/departments"
+  body:
+    type: json
+    data: "{\r
+
+      \      \"Name\":\"MST\"\r
+
+      \      //\"ParentId\":1\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
