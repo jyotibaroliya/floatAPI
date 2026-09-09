@@ -8,15 +8,12 @@ http:
   url: "{{base_url}}/api/Auth/signup"
   body:
     type: json
-    data: "{\r
-
-      \  \"name\": \"Test ProjectStage\",\r
-
-      \  \"email\": \"testprojectstage@yopmail.com\",\r
-
-      \  \"password\": \"TestProjectStage@123\"\r
-
-      }"
+    data: |-
+      {
+        "name": "Test ProjectStage ",
+        "email": "testprojectstage@yopmail.com",
+        "password": "TestProjectStage@123"
+      }
   auth: inherit
 
 settings:
