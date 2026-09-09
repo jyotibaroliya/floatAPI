@@ -8,16 +8,15 @@ http:
   url: "{{base_url}}/api/Auth/me"
   body:
     type: text
-    data: "{\r
-
-      \  \"email\": \"testdhwani@yopmail.com\",\r
-
-      \  \"password\": \"TestDhwani@123\"\r
-
-      }"
+    data: ""
   auth:
     type: bearer
     token: "{{auth_token}}"
+
+runtime:
+  variables:
+    - name: base_url
+      value: http://10.37.58.123:8087
 
 settings:
   encodeUrl: true

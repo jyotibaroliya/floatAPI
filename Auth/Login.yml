@@ -8,36 +8,27 @@ http:
   url: "{{base_url}}/api/Auth/login"
   body:
     type: json
-    data: "{\r
-
-      \    //  \"email\": \"jyoti.rami@yopmail.com\",\r
-
-      \    //   \"password\": \"JyotiRami@123\"\r
-
-      \    //  \"email\": \"spec.india@yopmail.com\",\r
-
-      \    //  \"password\": \"Spec@123456789\"\r
-
-      \      \"email\": \"testprojectstage@yopmail.com\",\r
-
-      \      \"password\": \"TestProjectStage@123\"\r
-
-      \    //   \"email\": \"usertest1@yopmail.com\",\r
-
-      \    //   \"password\": \"UserTest@1234\"\r
-
-      \    //   \"email\":\"nehalrami@yopmail.com\",\r
-
-      \    //   \"password\":\"NehalRami@123\",\r
-
-      \    // \"email\": \"spec.usa@yopmail.com\",\r
-
-      \    // \"password\": \"Spec@123456789\"\r
-
-      }"
+    data: |-
+      {
+          //  "email": "jyoti.rami@yopmail.com",
+          //   "password": "JyotiRami@123"
+          //  "email": "spec.india@yopmail.com",
+          //  "password": "Spec@123456789"
+      //       "email": "testprojectstage@yopmail.com",
+      //       "password": "TestProjectStage@123"
+          //   "email": "usertest1@yopmail.com",
+          //   "password": "UserTest@1234"
+          //   "email":"nehalrami@yopmail.com",
+          //   "password":"NehalRami@123",
+          "email": "spec.usa@yopmail.com",
+          "password": "Spec@123456789"
+      }
   auth: inherit
 
 runtime:
+  variables:
+    - name: base_url
+      value: http://10.37.58.123:8087
   scripts:
     - type: after-response
       code: "let response = res.getBody();\r
